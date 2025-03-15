@@ -34,9 +34,9 @@ services:
       - pro_network
     # environment:
     #   DATABASE_URL : postgresql://rajeev:admin@123@db:5432/projectmanagement
-    volumes:
-      - ./server:/app
-      - /app/node_modules
+    # volumes:
+    #   - ./server:/app
+    #   - /app/node_modules
     # command: >
     #   sh -c "npm install && npm run build && npx prisma migrate dev && npm run seed && npm run start"
 
@@ -54,9 +54,9 @@ services:
       - "3000:3000"
     networks:
       - pro_network
-    volumes:
-      - ./client:/app
-      - /app/node_modules
+    # volumes:
+    #   - ./client:/app
+    #   - /app/node_modules
     #command: sh -c "npm install && npm run dev"
 
   nginx:
