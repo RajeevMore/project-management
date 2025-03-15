@@ -1,0 +1,27 @@
+npx create-next-app@latest 
+npm i react@18.0.0 react-dom@18
+npm i @mui/x-data-grid @mui/material @emotion/react @emotion/styled lucide-react numeral recharts axios date-fns react-dnd
+npm i react-dnd-html5-backend
+npm i gantt-task-react@0.3.9  
+npm i -D @types/node @types/uuid @types/numeral
+npm i -D prettier prettier-plugin-tailwindcss
+npm i -D tailwind-merge
+
+cd server
+npm init -y
+npm i -D ts-node typescript @types/node
+npx tsc --init
+
+npm i prisma @prisma/client
+npx prisma init
+
+npx prisma generate
+npx prisma migrate dev --name init
+npm run seed 
+
+// Backend setup
+npm i express body-parser cors dotenv helmet morgen  
+npm i -D rimraf concurrently nodemon @types/cors @types/express @types/morgen @types/nodee
+
+npm i lodash         // for search operation
+npm i -D @types/lodash 
