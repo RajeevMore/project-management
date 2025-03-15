@@ -43,7 +43,7 @@ const ModalNewTask = ({ isOpen, onClose, id }: Props) => {
   const [assignedUserId, setAssignedUserId] = useState("");
   const [projectId, setProjectId] = useState("");
 
-  const [files, setFiles] = useState<FileList | null>(null);
+  // const [files, setFiles] = useState<FileList | null>(null);
 
   const handleSubmit = async () => {
     //if (!title || !authorUserId || !(id !== null || projectId)) return;
@@ -56,10 +56,10 @@ const ModalNewTask = ({ isOpen, onClose, id }: Props) => {
       representation: "complete",
     });
 
-    let uploadedFilePaths = [];
-    if (files) {
-      uploadedFilePaths = await uploadFiles(files);
-    }
+    // let uploadedFilePaths = [];
+    // if (files) {
+    //   uploadedFilePaths = await uploadFiles(files);
+    // }
 
     await createTask({
       title,
@@ -73,7 +73,7 @@ const ModalNewTask = ({ isOpen, onClose, id }: Props) => {
       assignedUserId: parseInt(assignedUserId),
       //projectId: id !== null ? Number(id) : Number(projectId),
       projectId: Number(id),
-      files: uploadedFilePaths,
+      //files: uploadedFilePaths,
     });
   };
 
@@ -184,12 +184,12 @@ const ModalNewTask = ({ isOpen, onClose, id }: Props) => {
             onChange={(e) => setProjectId(e.target.value)}
           />
         )}
-        <input
+{/*         <input
           type="file"
           multiple
           className={inputStyles}
           onChange={(e) => setFiles(e.target.files)}
-        />
+        /> */}
         <button
           type="submit"
           className={`focus-offset-2 mt-4 flex w-full justify-center rounded-md border border-transparent bg-blue-primary px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 ${
