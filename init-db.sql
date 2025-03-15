@@ -1,5 +1,5 @@
 CREATE DATABASE inventorymanagement;
-CREATE USER rajeev WITH PASSWORD 'admin@123';
+CREATE USER rajeev WITH PASSWORD 'admin';
 GRANT ALL PRIVILEGES ON DATABASE inventorymanagement TO rajeev;
 
 ALTER USER rajeev WITH CREATEDB;
