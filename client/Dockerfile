@@ -19,7 +19,7 @@ FROM nginx:latest
 
 COPY --from=builder /app/.next /usr/share/nginx/html
 
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY nginx.conf /etc/nginx/
 
 EXPOSE 80
 
