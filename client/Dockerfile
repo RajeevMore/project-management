@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 3050
+EXPOSE 3000
 
 RUN npm run build
 
@@ -21,6 +21,6 @@ COPY --from=builder /app/.next /usr/share/nginx/html
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
-EXPOSE 8081
+EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
