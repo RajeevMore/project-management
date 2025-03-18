@@ -1,4 +1,4 @@
-CREATE DATABASE PnventoryManagement;
+CREATE DATABASE ProjectManagement;
 CREATE USER rajeev WITH PASSWORD 'admin';
 GRANT ALL PRIVILEGES ON DATABASE ProjectManagement TO rajeev;
 
