@@ -1,6 +1,6 @@
-CREATE DATABASE inventorymanagement;
+CREATE DATABASE PnventoryManagement;
 CREATE USER rajeev WITH PASSWORD 'admin';
-GRANT ALL PRIVILEGES ON DATABASE inventorymanagement TO rajeev;
+GRANT ALL PRIVILEGES ON DATABASE ProjectManagement TO rajeev;
 
 ALTER USER rajeev WITH CREATEDB;
 
