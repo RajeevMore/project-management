@@ -59,19 +59,19 @@ services:
     #   - /app/node_modules
     #command: sh -c "npm install && npm run dev"
 
-  nginx:
-    image: nginx:latest
-    container_name: nginx_proxy
-    restart: always
-    ports:
-      - "8002:80"
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
-    depends_on:
-      - pro_backend
-      - pro_frontend
-    networks:
-      - pro_network
+  # nginx:
+  #   image: nginx:latest
+  #   container_name: nginx_proxy
+  #   restart: always
+  #   ports:
+  #     - "8002:80"
+  #   volumes:
+  #     - ./nginx.conf:/etc/nginx/nginx.conf:ro
+  #   depends_on:
+  #     - pro_backend
+  #     - pro_frontend
+  #   networks:
+  #     - pro_network
   
 networks:
   pro_network:
