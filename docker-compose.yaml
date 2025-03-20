@@ -27,7 +27,7 @@ services:
     environment:
       DATABASE_URL: ${DATABASE_URL}
     ports:
-      - "5000:5000"
+      - "5002:5002"
     depends_on:
       - postgres
     networks:
@@ -51,7 +51,7 @@ services:
     depends_on:
       - pro_backend
     ports:
-      - "3000:3000"
+      - "3002:3002"
     networks:
       - pro_network
     # volumes:
