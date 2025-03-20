@@ -8,6 +8,6 @@ RUN npm install --only=production
 
 COPY . .
 
-EXPOSE 5000
+EXPOSE 5002
 
 CMD ["sh", "-c", "npx prisma migrate dev && npm run seed && npm run build && npm run start"]
